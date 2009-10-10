@@ -1,0 +1,9 @@
+[submodule "slime"]
+	path = slime
+	url = git://git.boinkor.net/slime.git
+[submodule "swank-clojure"]
+	path = swank-clojure
+	url = git://github.com/jochu/swank-clojure.git
+[submodule "clojure-mode"]
+	path = clojure-mode
+	url = git://github.com/jochu/clojure-mode.git
