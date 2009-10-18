@@ -21,7 +21,22 @@
 
 (require 'swank-clojure-autoload)
 
-;; slime
+; YASnippet
+(add-to-list 'load-path "~/.emacs.d/bundles/yasnippet")
+(require 'yasnippet)
+(yas/initialize)
+(yas/load-directory "~/.emacs.d/plugins/yasnippet/snippets")
+
+; Cucumber mode
+(add-to-list 'load-path "~/.emacs.d/bundles/cucumber")
+(load "cucumber-mode")
+
+;; load bundle snippets
+(yas/load-directory "~/.emacs.d/bundles/cucumber/snippets")
+
+(add-to-list 'auto-mode-alist '("\\.feature" . feature-mode))
+
+; slime
 (eval-after-load "slime"
   '(progn (slime-setup '(slime-repl))))
 
@@ -29,4 +44,4 @@
 (require 'slime)
 (slime-setup)
 
-(server-start)
+;(server-start)
